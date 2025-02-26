@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    text-align: center;
+    border-bottom: 4px solid;
+    background-color: blueviolet;
+    justify-content: center;
+    color:black;
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 10px;
+    padding: 10px;
+    width:80%;
+    background-color: goldenrod;
+    color:grey;
+}
+footer{
+    background-color: grey;
+    color:blue;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width:100vw;
+    padding: 10px;
+}
+p{
+    padding: 1em;
+}
