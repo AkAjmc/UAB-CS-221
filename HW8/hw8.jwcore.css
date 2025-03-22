@@ -1,67 +1,64 @@
+header{
+    top: 0;
+    background-color: cadetblue;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+    z-index: 1;
+    position: sticky
+}
+#pic1{
+    background-image: url(picture1.jpg);
+}
+#pic2{
+    background-image: url(picture2.jpg);
+}
+#pic3{
+    background-image: url(picture3.jpg);
+}
+#pic4{
+    background-image: url(picture4.jpg);
+}
+#pic5{
+    background-image: url(picture5.jpg);
+}
+#pic6{
+    background-image: url(picture6.jpg);
+}
+body{
+    background-color: black;
+}
+.Grid-Item{
+    background-size: cover;
+    background-position: center;
+    width: 300px; 
+    height: 300px;
+    border: 3px;
+    border-style: dotted;
+    border-radius: 25px;
+    border-color: yellow;
+}
+.Grid-Item:nth-child(odd){
+    border-style: solid;
+}
+.Grid-Item:hover{
+    transform: scale(1.1);
+}
+.Grid-Item:not(#pic1,#pic2,#pic4,#pic5,#pic6){
+    transform: scale(1);
+    /* I excluded the 3rd grid element because it was my least favorite image*/
+}
 @media screen and (max-width: 480px)
 {
-    #pic1{
-        background-image: url(picture1.jpg);
-    }
-    #pic2{
-        background-image: url(picture2.jpg);
-    }
-    #pic3{
-        background-image: url(picture3.jpg);
-    }
-    #pic4{
-        background-image: url(picture4.jpg);
-    }
-    #pic5{
-        background-image: url(picture5.jpg);
-    }
-    #pic6{
-        background-image: url(picture6.jpg);
-    }
     .Grid{
         display: grid;
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: repeat(auto-fill, 300px);
         grid-gap: 25px;
     }
-    .Grid-Item{
-        background-size: cover;
-        background-position: center;
-        width: 300px; 
-        height: 300px;
-        border: 3px;
-        border-style: dotted;
-        border-radius: 25px;
-        border-color: yellow;
-    }
-    .Grid-Item:nth-child(odd){
-        border-style: solid;
-    }
-    .Grid-Item:hover{
-        transform: scale(1.1);
-    }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px)
 {
-    #pic1{
-        background-image: url(picture1.jpg);
-        content: "Picture of Cloth";
-    }
-    #pic2{
-        background-image: url(picture2.jpg);
-    }
-    #pic3{
-        background-image: url(picture3.jpg);
-    }
-    #pic4{
-        background-image: url(picture4.jpg);
-    }
-    #pic5{
-        background-image: url(picture5.jpg);
-    }
-    #pic6{
-        background-image: url(picture6.jpg);
-    }
     .Grid{
         display: grid;
         grid-template-columns: repeat(2,300px);
@@ -69,43 +66,9 @@
         grid-gap: 25px;  
 
     }
-    .Grid-Item{
-        background-size: cover;
-        background-position: center;
-        width: 300px; 
-        height: 300px;
-        border: 3px;
-        border-style: dotted;
-        border-radius: 25px;
-        border-color: yellow;
-    }
-    .Grid-Item:nth-child(odd){
-        border-style: solid;
-    }
-    .Grid-Item:hover{
-        transform: scale(1.1);
-    }
 }
 @media screen and (min-width: 1025px)
 {
-    #pic1{
-        background-image: url(picture1.jpg);
-    }
-    #pic2{
-        background-image: url(picture2.jpg);
-    }
-    #pic3{
-        background-image: url(picture3.jpg);
-    }
-    #pic4{
-        background-image: url(picture4.jpg);
-    }
-    #pic5{
-        background-image: url(picture5.jpg);
-    }
-    #pic6{
-        background-image: url(picture6.jpg);
-    }
     .Grid{
         display: grid;
         grid-gap: 10px;
@@ -113,22 +76,6 @@
         grid-template-columns: repeat(3,300px);
         grid-template-rows: repeat(auto-fill,300px);
         grid-gap: 25px;
-    }
-    .Grid-Item{
-        background-size: cover;
-        background-position: center;
-        width: 300px; 
-        height: 300px;
-        border: 3px;
-        border-style: dotted;
-        border-radius: 25px;
-        border-color: yellow;
-    }
-    .Grid-Item:nth-child(odd){
-        border-style: solid;
-    }
-    .Grid-Item:hover{
-        transform: scale(1.10);
     }
 }
 
