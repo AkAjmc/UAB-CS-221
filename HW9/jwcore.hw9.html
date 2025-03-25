@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style> 
+    body{
+        background-color: black; 
+    }
+    </style>
+    <script>
+        let input = prompt("Enter a numeric value:") // forces the user to input a number to use the site further
+        input = Number(input); // converts the string value received from the user to a number
+        if(isNaN(input) == true){ // checks if the value inputed was not a number. If it was not a number, it displays that the value wasn't a number.
+            console.log("The value you entered was not a number. Try again."); // displays the following text
+        } else{ // alternate path where if the value inputed was a number, it would see if it were even or odd.
+            if(input % 2 == 0){ /*uses the modulus operator which divides the given number by the second value and gives the remainder. 
+            In this case since a number can only be even or odd, it divides the number given by two and if it equals zero it is even and if it is 1, it is odd. */
+                console.log("The number you inputed was even");  // displays the following text.
+            } else{
+                console.log("The number you inputed was odd"); // displays the following text.
+            }
+        }
+    </script>
+   </head>
+   <body>
+
+   </body>
+</html>
