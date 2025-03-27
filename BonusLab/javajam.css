@@ -1,24 +1,33 @@
-body{
+body{ 
+    /* creates a consistent background color and font changes that will be applied to the entire document*/
     padding: 0;
     margin: 0;
     background-color: #FCEBB6;
     color:#221811;
     text-align: center;
+    font-family: Arial, Tahoma,  sans-serif;
 }
 h1{
     font-size: 25px;
+    color: #8C3826;
 }
 h1 > p{
     font-size: 15px;
+    color:#221811;
 }
 h1 > div > p{
     font-size: 15px;
+    color:#221811;
 }
 nav{
     font-size: 15px;
 }
+.grid-item{/* makes it so grid items all have a white background*/
+    background-color: #FEFAEB;
+}
 #parent{
     @media screen and (max-width: 599px){
+        /*in id parent because this shouldn't do this on every page. makes it so if the user is on mobile it only displays one element per row as two would take up too much space*/
         #grid{
             display: grid;
             grid-template-columns: 1fr;
@@ -32,9 +41,9 @@ nav{
             border: 3px;
             border-style: solid;
             border-radius: 25px;
-            border-color: black;
+            border-color:#221811;
             width: 100vw; 
-            height:50vw;
+            height:60vw;
             padding-bottom: 10px;
         }
         h1 > div > p{
@@ -45,6 +54,8 @@ nav{
         }
     }
     @media screen and (min-width: 600px) and (max-width: 1024px){
+        /*makes it so if the user is on mobile or has a larger display less than a laptop. it only displays one element per row as two would take up too much space. 
+        two breakpoints for mobile because text overflows at some lengths */
         #grid{
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -70,6 +81,8 @@ nav{
         }
     }
     @media screen and (min-width: 1025px) and (max-width: 1199px){
+        /*in id parent because this shouldn't do this on every page. makes it so if the user is on desktop it displays one element per row as two would take up too much space.
+        two breakpoints for desktop because text overflows at some lengths*/
         #grid{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -95,6 +108,8 @@ nav{
         }
     }
     @media screen and (min-width: 1200px){
+        /*in id parent because this shouldn't do this on every page. makes it so if the user is on desktop it displays one element per row as two would take up too much space.
+        two breakpoints for desktop because text overflows at some lengths*/
         #grid{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -120,7 +135,7 @@ nav{
         }
     }
 }
-#flex-container{
+#flex-container{/*flexcontainer for links*/
     display: flex;
     flex-direction: row;
     flex-shrink: 1;
@@ -129,7 +144,7 @@ nav{
     margin: 5px;
     gap:5px;
 }
-#flex-grid-item{
+#parent > #flex-item{/*flexitem for links*/
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -137,14 +152,28 @@ nav{
     margin: 5px;
     gap:5px;
 }
-.next-page{
-    background-color:#9E84AE;
-    border-color: black;
+.flex-item{/*flexitem for borders and backgrounds*/
+    border: 3px;
+    border-style: dashed;
+    border-color:#8C3826;
+    padding: 15px;
+    background-color: #FEFAEB;
+}
+.next-page{ /*id for links. it creates a border that will match with background color when hovered over when it is created later in the stylesheet*/
+    border-color:#8C3826;
     border-style:solid;
     padding: 10px;
     margin-bottom: 5px;
+    border-radius: 25px;
 }
-.bar{
+a:link{
+    color:#221811;
+    text-decoration: underline;
+}
+.next-page:hover{
+    background-color: #8C3826;
+}
+.bar{/*makes navigation bar fixed at the top of the screen*/
     background-color: #D2B48C;
     color: #8C3826;
     position: sticky;
@@ -153,4 +182,225 @@ nav{
     margin: 0;
     text-align: center;
     padding-top: 10px;
+}
+footer{
+    background-color: #D2B48C;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+h2{
+    font-size: 50px;
+    color: #221811;
+    background-color: #800000;
+    margin:0px;
+    padding:20px;
+    gap: 0px;
+}
+#menuP{
+     /*used on both menu pages and job application because it is more engaging for user.*/
+    @media screen and (max-width: 449px){
+         /*in id menuP because this shouldn't do this on every page. makes it so if the user is on mobile it doesnt display images.
+        three breakpoints for desktop because text overflows at some lengths*/
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+            font-size: 20;
+        }
+        #flex-container-m{
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 1;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            margin: 5px;
+            gap:5px;
+        }
+        img{
+            width:0%;
+            height:0%;
+        }
+        #menuP > .flex-item{
+            font-size: 10px;
+            border: 3px;
+            border-style: dashed;
+            border-color:#8C3826;
+            padding-bottom: 200px;
+            background-color: #FEFAEB;
+        }
+        .grid-item{
+            background-size: cover;
+            background-position: center;
+            border: 3px;
+            border-style: solid;
+            border-radius: 25px;
+            border-color: black;
+            width: 100vw; 
+            height:300vw;
+        }
+        h1 > div > p{
+            font-size: 15px;
+        }
+        h1 > div{
+            font-size: 25px;
+        }
+        }
+    @media screen and (min-width: 450px) and (max-width: 750px){
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+            font-size: 20;
+        }
+        #flex-container-m{
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 1;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            margin: 5px;
+            gap:5px;
+        }
+        img{
+            width:0%;
+            height:0%;
+        }
+        #menuP > .flex-item{
+            font-size: 10px;
+            border: 3px;
+            border-style: dashed;
+            border-color:#8C3826;
+            padding-bottom: 200px;
+            background-color: #FEFAEB;
+        }
+        .grid-item{
+            background-size: cover;
+            background-position: center;
+            border: 3px;
+            border-style: solid;
+            border-radius: 25px;
+            border-color: black;
+            width: 100vw; 
+            height:150vw;
+        }
+        h1 > div > p{
+            font-size: 15px;
+        }
+        h1 > div{
+            font-size: 25px;
+        }
+    }
+    @media screen and (min-width: 751px) and (max-width:1024px){
+         /*more than mobile less than desktop that has pictures. multiple breakpoints for text because it overflows at certain points*/
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+        }
+        .grid-item{
+            background-size: cover;
+            background-position: center;
+            border: 3px;
+            border-style: solid;
+            border-radius: 25px;
+            border-color: black;
+            width: 100vw; 
+            height:60vw;
+        }
+        #menuP > #flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-shrink: 1;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            margin: 5px;
+            gap:5px;
+        }
+        #flex-container-m{
+            display: flex;
+            flex-direction: row;
+            flex-shrink: 1;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            margin: 5px;
+            gap:5px;
+        }
+        h1 > div > p{
+            font-size: 15px;
+        }
+        h1 > div{
+            font-size: 25px;
+        }
+        }
+        @media screen and (min-width:1025px){
+             /*in id menuP because this shouldn't do this on every page. makes it so pictures are displayed with text.*/
+            #grid{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(auto-fill, 1fr);
+                grid-row-gap: 5px;
+                grid-column-gap: 5px;
+            }
+            .grid-item{
+                background-size: cover;
+                background-position: center;
+                border: 3px;
+                border-style: solid;
+                border-radius: 25px;
+                border-color: black;
+                width: 99vw; 
+                height:50vw;
+            }
+            #menuP > #flex-container{
+                display: flex;
+                flex-direction: row;
+                flex-shrink: 1;
+                flex-grow: 1;
+                justify-content: space-evenly;
+                margin: 5px;
+                gap:5px;
+            }
+            #flex-container-m{
+                display: flex;
+                flex-direction: row;
+                flex-shrink: 1;
+                flex-grow: 1;
+                justify-content: space-evenly;
+                margin: 5px;
+                gap:5px;
+            }
+            h1 > div > p{
+                font-size: 15px;
+            }
+            h1 > div{
+                font-size: 25px;
+            }
+            }
+#form{
+    padding: 5px;
+}
+.inputclass{
+     /*styles form elements to make them more engaging for user*/
+    border: 4px;
+    padding: 10px;
+    box-shadow: 0 0 15px 4px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #8C3826;
+}    
+.inputclass:hover{
+    /*styles form elements when hovered over to make them more engaging for user*/
+    background-color:#D2B48C;
+}
 }
