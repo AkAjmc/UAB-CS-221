@@ -7,7 +7,7 @@ let bool = true;
         if(input == "rock" || input == "paper" || input == "scissors"){ 
                 bool = false;
         } else{ 
-            console.log("The value you entered was not paper, rock, or scissors. Please try again.");  
+            console.error("The value you entered was not paper, rock, or scissors. Please try again.");  
 
         }
     }while(bool == true);
