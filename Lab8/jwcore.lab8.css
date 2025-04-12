@@ -1,0 +1,30 @@
+body{
+    background-color: #696969;
+}
+h1{
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div > button{
+    padding: 15px;
+    border-radius: 15px;
+}
+.paper{
+    background-color: lightgreen;
+}
+.rock{
+    background-color: lightcoral;
+}
+.scissors{
+    background-color: lightblue;
+}
+.answer{
+    text-align: center;
+    color: yellow;
+    font-size: 25px;
+}
