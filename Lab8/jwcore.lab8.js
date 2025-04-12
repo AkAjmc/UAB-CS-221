@@ -1,4 +1,3 @@
-let bool = true;
 window.onload = function(){
     function calcScore(input){
         let compInput = Math.floor(Math.random() * 3);
